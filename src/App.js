@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from "./profile/profile";
+import img from "./sheep.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        width: 500,
+        margin: "0 auto",
+        backgroundColor: "lightseagreen",
+        padding: 20,
+      }}
+    >
+      <Profile
+        fullName={undefined}
+        bio="Simply the best web developer in Tunisia"
+        profession="Web developer"
+      >
+        <img src={img} alt="a shepard with his sheeps" style={{ width: 300 }} />
+      </Profile>
     </div>
   );
 }
