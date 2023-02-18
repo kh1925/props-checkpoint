@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 const Profile = (props) => {
   return (
     <div>
-      <h1 style={{ color: "blue" }}>{props.fullName}</h1>
+      <h1
+        onClick={() => props.handleName(props.fullName)}
+        style={{ color: "blue" }}
+      >
+        {props.fullName}
+      </h1>
       <h2>{props.bio}</h2>
       <h3 style={{ color: "white" }}>{props.profession}</h3>
       {props.children}
@@ -17,7 +22,7 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
-  fullName: PropTypes.number,
+  fullName: PropTypes.string,
 };
 
 export default Profile;
